@@ -1,0 +1,25 @@
+[package]
+name = "csdet"
+version = "1.0.0"
+edition = "2021"
+authors = ["Colerar"]
+description = "Charset Detection CLI"
+
+[profile.release]
+lto = "thin"
+strip = true
+
+[dependencies]
+anyhow = "1.0.75"
+chardetng = "0.1.17"
+clap = { version = "4.4.6", features = [
+  "derive",
+  "unicode",
+  "wrap_help",
+  "cargo",
+] }
+comfy-table = "7.0.1"
+dialoguer = "0.11.0"
+encoding_rs = "0.8.33"
+encoding_rs_io = "0.1.7"
+indicatif = { version = "0.17.7", features = ["improved_unicode"] }
